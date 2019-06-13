@@ -7,11 +7,6 @@ test('Should return true for a Wilson prime', () => {
     .toBe(true);
 });
 
-test('Should return true for a largest Wilson prime', () => {
-  expect(isWilsonPrime(563))
-    .toBe(true);
-});
-
 test('Should return false for natural numbers', () => {
   expect(isWilsonPrime(12))
     .toBe(false);
