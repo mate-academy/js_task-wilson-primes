@@ -13,7 +13,7 @@ test('Should return false for natural numbers', () => {
 });
 
 test('Should return false for a prime number', () => {
-  expect(isWilsonPrime(151))
+  expect(isWilsonPrime(11))
     .toBe(false);
 });
 
