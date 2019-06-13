@@ -7,7 +7,7 @@
 6 silly lifecycle js-task-boilerplate@1.0.0~pretest: no script for pretest, continuing
 7 info lifecycle js-task-boilerplate@1.0.0~test: js-task-boilerplate@1.0.0
 8 verbose lifecycle js-task-boilerplate@1.0.0~test: unsafe-perm in lifecycle true
-9 verbose lifecycle js-task-boilerplate@1.0.0~test: PATH: /usr/share/npm/bin/node-gyp-bin:/home/h2ash/Документы/MATE ACADEMY/js_task-wilson-primes/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+9 verbose lifecycle js-task-boilerplate@1.0.0~test: PATH: /usr/share/npm/bin/node-gyp-bin:/home/h2ash/Документы/MATE ACADEMY/js_task-wilson-primes/node_modules/.bin:/home/h2ash/Документы/MATE ACADEMY/js_task-wilson-primes/node_modules/.bin:/home/h2ash/Документы/MATE ACADEMY/node_modules/.bin:/home/h2ash/Документы/node_modules/.bin:/home/h2ash/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/usr/bin:/usr/lib/git-core:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
 10 verbose lifecycle js-task-boilerplate@1.0.0~test: CWD: /home/h2ash/Документы/MATE ACADEMY/js_task-wilson-primes
 11 silly lifecycle js-task-boilerplate@1.0.0~test: Args: [ '-c', 'jest' ]
 12 silly lifecycle js-task-boilerplate@1.0.0~test: Returned: code: 1  signal: null
