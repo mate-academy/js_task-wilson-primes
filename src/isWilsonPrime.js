@@ -20,6 +20,17 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  if (num <= 0) {
+    return false;
+  }
+
+  let factorial = 1;
+
+  for (let i = 1; i < num; i++) {
+    factorial *= i;
+  }
+
+  return !((factorial + 1) % (num * num));
 }
 
 module.exports = isWilsonPrime;
