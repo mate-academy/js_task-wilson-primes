@@ -20,6 +20,11 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  return Number.isInteger((fac(num - 1) + 1) / num ** 2);
+}
+
+function fac(n) {
+  return (n < 2) ? 1 : fac(n - 1) * n;
 }
 
 module.exports = isWilsonPrime;
