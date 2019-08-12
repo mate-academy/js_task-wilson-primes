@@ -19,7 +19,16 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  function factorial(checkedNumber) {
+    let i = 1;
+    let sum = 1;
+    while (i <= checkedNumber) {
+      sum *= i;
+      i++;
+    }
+    return sum;
+  }
+  return Number.isInteger((factorial(num - 1) + 1) / (num * num));
 }
 
 module.exports = isWilsonPrime;
