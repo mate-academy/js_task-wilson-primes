@@ -29,7 +29,7 @@ function isWilsonPrime(num) {
       return false;
     }
 
-    for (let i = 2; i < n; i++) {
+    for (let i = 2; i < n / 2; i++) {
       if (!(n % i)) {
         return false;
       }
