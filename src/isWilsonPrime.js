@@ -16,10 +16,22 @@
  *
  * @param {number} num
  *
- * @return {boolean}
+ * @return {number}
  */
+
+function getFactorial(num) {
+  return (num !== 1) ? num * getFactorial(num - 1) : 1;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  if (num < 0 || !Number.isInteger(num)) {
+    return false;
+  }
+
+  const factorial = getFactorial(num - 1);
+  const result = (factorial + 1) / (num * num);
+
+  return Number.isInteger(result);
 }
 
 module.exports = isWilsonPrime;
