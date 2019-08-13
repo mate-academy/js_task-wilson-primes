@@ -23,7 +23,7 @@ function isWilsonPrime(num) {
   for (let i = 1; i < num; i++) {
     factorial *= i;
   }
-  return ((factorial + 1) / (num * num)) % 1 === 0;
+  return Number.isInteger((factorial + 1) / (num * num));
 }
 
 module.exports = isWilsonPrime;
