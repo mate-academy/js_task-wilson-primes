@@ -18,8 +18,16 @@
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
-  // write code here
+  function factorial(number) {
+    let whole = 1;
+    for (let i = 1; i <= number; i++) {
+      whole = whole * i;
+    }
+    return whole;
+  }
+  return (Number.isInteger((factorial(num - 1) + 1) / (num * num))) !== false;
 }
 
 module.exports = isWilsonPrime;
