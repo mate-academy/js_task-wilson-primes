@@ -19,7 +19,36 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  if (parseInt(num) !== num || num <= 0) {
+    return false;
+  }
+  // checking for prime numbers
+  if (num % 2 === 0 && num > 2) {
+    return false;
+  }
+
+  for (let i = 3; i < num; i += 2) {
+    if (num % i === 0) {
+      return false;
+    };
+  }
+
+  // factorial function
+  const factorialNum = (n) => {
+    let factorial = 1;
+    if (n === 0) {
+      return 1;
+    };
+
+    for (let i = 1; i <= n; i++) {
+      factorial *= i;
+    }
+
+    return factorial;
+  };
+
+  // is Wilson prime?
+  return !((factorialNum(num - 1) + 1) % (num * num));
 }
 
 module.exports = isWilsonPrime;
