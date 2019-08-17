@@ -48,11 +48,7 @@ function isWilsonPrime(num) {
   };
 
   // is Wilson prime?
-  if ((factorialNum(num - 1) + 1) % (num * num) === 0) {
-    return true;
-  }
-
-  return false;
+  return !((factorialNum(num - 1) + 1) % (num * num));
 }
 
 module.exports = isWilsonPrime;
