@@ -16,10 +16,15 @@
  *
  * @param {number} num
  *
- * @return {boolean}
+ * @return {number}
  */
+function factorial(a) {
+  let rval = 1;
+  for (let i = 2; i <= a; i++) { rval = rval * i; }
+  return rval;
+}
 function isWilsonPrime(num) {
-  // write code here
+  return Number.isInteger((factorial(num - 1) + 1) / (num * num));
 }
 
 module.exports = isWilsonPrime;
