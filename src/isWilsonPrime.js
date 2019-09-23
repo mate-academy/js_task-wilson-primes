@@ -18,8 +18,22 @@
  *
  * @return {boolean}
  */
+
+const factorial = (num) => {
+  let sum = 1;
+  for (let i = 1; i <= num; i++) {
+    sum *= i;
+  }
+  return sum;
+};
+
 function isWilsonPrime(num) {
-  // write code here
+  if (num < 0) {
+    return false;
+  }
+
+  const isWilsonNum = (factorial(num - 1) + 1) / (num * num);
+  return Number.isInteger(isWilsonNum);
 }
 
 module.exports = isWilsonPrime;
