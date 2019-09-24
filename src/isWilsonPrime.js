@@ -20,13 +20,15 @@
  */
 
 function isPrime(num) {
+  if (num < 2 || !Number.isInteger(num)) {
+    return false;
+  }
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
       return false;
     }
-
-    return num > 1;
   }
+  return true;
 }
 
 function factorial(n) {
@@ -36,7 +38,7 @@ function factorial(n) {
 function isWilsonPrime(num) {
   let calculation = null;
 
-  if (isPrime(num) && Number.isInteger(num)) {
+  if (isPrime(num)) {
     calculation = (factorial(num - 1) + 1) / Math.pow(num, 2);
   }
 
