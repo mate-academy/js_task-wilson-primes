@@ -20,6 +20,18 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  const numNew = num - 1;
+
+  let interim = 1;
+  let count = 0;
+  for (let i = 1; i <= numNew; i++) {
+    count = interim * i;
+    interim = count;
+  }
+
+  const result = (count + 1) / (num * num);
+
+  return Math.round(result) === result;
 }
 
 module.exports = isWilsonPrime;
