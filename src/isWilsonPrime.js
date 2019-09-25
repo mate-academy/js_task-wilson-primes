@@ -19,15 +19,17 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  if (num <= 0 || num !== Math.floor(num)) {
+  if (num <= 0 || (!Number.isInteger(num))) {
     return false;
   }
   const recArg = num - 1;
+
   function fact(n) {
     return n ? n * (fact(n - 1)) : 1;
   }
   const wilson = (fact(recArg) + 1) / (num * num);
-  if (wilson !== Math.floor(wilson)) {
+
+  if (!Number.isInteger(wilson)) {
     return false;
   } return true;
 }
