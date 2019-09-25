@@ -24,7 +24,7 @@ function isWilsonPrime(num) {
     calcFactorial *= i;
   }
 
-  if ((num > 0) || (num % 1 === 0)) {
+  if (Number.isInteger(num)) {
     const results = (calcFactorial + 1) / (num * num);
     if (results % 1 === 0) {
       return true;
