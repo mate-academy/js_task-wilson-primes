@@ -20,16 +20,13 @@
  */
 function isWilsonPrime(num) {
   // write code here
-    let factNum = num - 1;
+  let factNum = num < 2 ? 1 : num - 1;
     if (factNum === 0 || factNum === 1)
       factNum = 1;
     for (var i = factNum - 1; i >= 1; i--) {
       factNum *= i;
     }
-    if (Number.isInteger((factNum + 1) / (num * num)) === true) {
-      return true;
-    }
-    return false;
+  return Number.isInteger((factNum + 1) / (num * num));
 
 }
 
