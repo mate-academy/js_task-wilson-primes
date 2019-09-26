@@ -24,11 +24,7 @@ function isWilsonPrime(num) {
     factorial *= num - i;
   }
 
-  if (Number.isInteger((factorial + 1) / (num * num))) {
-    return true;
-  }
-
-  return false;
+  return Number.isInteger((factorial + 1) / (num * num));
 }
 
 module.exports = isWilsonPrime;
