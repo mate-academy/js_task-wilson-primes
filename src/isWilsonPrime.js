@@ -1,6 +1,22 @@
 'use strict';
 
 /**
+ * Factorial calculate function
+ *
+ * @param {number} n
+ * @returns {number}
+ */
+function factorial(n) {
+  if (n < 0) {
+    return -1;
+  } else if (n === 0) {
+    return 1;
+  } else {
+    return (n * factorial(n - 1));
+  }
+}
+
+/**
  * Wilson primes satisfy the following condition:
  *
  * 1) Let Num represent a prime number.
@@ -18,8 +34,10 @@
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
-  // write code here
+  return (Number.isInteger((factorial(num - 1) + 1) / Math.pow(num, 2))
+    && num >= 0);
 }
 
 module.exports = isWilsonPrime;
