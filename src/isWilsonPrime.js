@@ -23,16 +23,15 @@ function isWilsonPrime(num) {
     return false;
   }
 
-  let numMultiplyNum = 0;
   let result = 0;
-  numMultiplyNum = num * num;
-  const num2 = num - 1;
+  const numMultiplyNum = num * num;
+  const numMinusOne = num - 1;
 
   function factorial(a) {
     return (a !== 1) ? a * factorial(a - 1) : 1;
   }
 
-  result = (factorial(num2) + 1) / numMultiplyNum;
+  result = (factorial(numMinusOne) + 1) / numMultiplyNum;
 
   return (result === Math.trunc(result));
 }
