@@ -18,12 +18,18 @@
  *
  * @return {boolean}
  */
-function isWilsonPrime(num) {
-  function factorial(x) {
-    const n = parseInt(x);
-    return (n < 0 || x !== n) ? NaN : (n === 0 ? 1 : n * factorial(n - 1));
+
+function factorial(x) {
+  let n = 1;
+
+  for (let i = 2; i <= x; i++) {
+    n = n * i;
   }
 
+  return n;
+}
+
+function isWilsonPrime(num) {
   const number = (factorial(num - 1) + 1) / (num * num);
 
   return Number.isInteger(number);
