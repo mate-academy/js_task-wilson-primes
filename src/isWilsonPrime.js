@@ -21,13 +21,13 @@
 function isWilsonPrime(num) {
   if (num < 0 || Number.isInteger(num) === false) { return false; };
 
-  const arrayOfmultiplyedDigits = [1];
+  const arrayOfMultiplyedDigits = [1];
 
   for (let i = 1; i < num; i++) {
-    arrayOfmultiplyedDigits[i] = i * arrayOfmultiplyedDigits[i - 1];
+    arrayOfMultiplyedDigits[i] = i * arrayOfMultiplyedDigits[i - 1];
   }
 
-  const factorialOfNuber = arrayOfmultiplyedDigits.slice(-1)[0];
+  const factorialOfNuber = arrayOfMultiplyedDigits.slice(-1)[0];
 
   return Number.isInteger(((factorialOfNuber + 1) / (num * num)));
 }
