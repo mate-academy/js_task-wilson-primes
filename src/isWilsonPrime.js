@@ -23,20 +23,18 @@ function isWilsonPrime(num) {
     return false;
   }
 
-  let res1 = 0;
-  let res2 = 0;
-  let res3 = 0;
-  res1 = num * num;
+  let numMultiplyNum = 0;
+  let result = 0;
+  numMultiplyNum = num * num;
   const num2 = num - 1;
 
   function factorial(a) {
     return (a !== 1) ? a * factorial(a - 1) : 1;
   }
 
-  res2 = factorial(num2) + 1;
-  res3 = res2 / res1;
+  result = (factorial(num2) + 1) / numMultiplyNum;
 
-  return (res3 === Math.trunc(res3));
+  return (result === Math.trunc(result));
 }
 
 module.exports = isWilsonPrime;
