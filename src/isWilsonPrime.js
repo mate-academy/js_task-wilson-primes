@@ -27,6 +27,7 @@ function factorial(number) {
   if (number < 0) {
     return false;
   }
+
   return number !== 1 ? number * factorial(number - 1) : 1;
 }
 
