@@ -27,8 +27,7 @@ function isWilsonPrime(num) {
     arrayOfmultiplyedDigits[i] = i * arrayOfmultiplyedDigits[i - 1];
   }
 
-  const factorialOfNuber
-  = arrayOfmultiplyedDigits[arrayOfmultiplyedDigits.length - 1];
+  const factorialOfNuber = arrayOfmultiplyedDigits.slice(-1)[0];
 
   return Number.isInteger(((factorialOfNuber + 1) / (num * num)));
 }
