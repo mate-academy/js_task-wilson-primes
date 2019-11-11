@@ -18,8 +18,13 @@
  *
  * @return {boolean}
  */
+function getFactorial(number) {
+  return (number > 1) ? number * getFactorial(number - 1) : number;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  const result = ((getFactorial(num - 1) + 1) / num ** 2);
+  return (Math.trunc(result) - result === 0);
 }
 
 module.exports = isWilsonPrime;
