@@ -13,19 +13,31 @@
  * Examples:
  * isWilsonPrime(5)      returns true
  * isWilsonPrime(9)      returns false
+ /**
+ * @param {number} n
  *
+ * @return {boolean,number}
+ */
+
+function factorial(n) {
+  if (n < 0) {
+    return false;
+  }
+
+  if (n === 0) {
+    return 1;
+  }
+
+  return n * factorial(n - 1);
+}
+
+/**
  * @param {number} num
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
-  if (num < 0) {
-    return false;
-  }
-  function factorial(n) {
-    return n < 0 ? false : n === 0 ? 1
-      : n * factorial(n - 1);
-  }
   return Number.isInteger((factorial(num - 1) + 1) / (num * num));
 }
 
