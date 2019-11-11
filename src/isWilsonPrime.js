@@ -23,17 +23,17 @@ function isWilsonPrime(num) {
     return false;
   }
 
-  function factorial(n) {
-    if (n < 0) {
-      return false;
-    } else if (n === 0) {
-      return 1;
-    } else {
-      return n * factorial(n - 1);
-    }
-  }
-
   return Number.isInteger((factorial(num - 1) + 1) / (num * num));
+}
+
+function factorial(n) {
+  if (n < 0) {
+    return false;
+  } else if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
 }
 
 module.exports = isWilsonPrime;
