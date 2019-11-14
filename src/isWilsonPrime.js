@@ -15,11 +15,14 @@
  * isWilsonPrime(9)      returns false
  *
  * @param {number} num
- *
+ * * 2) Then ((Num-1)! + 1) / (Num * Num) should give a whole number.
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  let factorial = 1;
+  for (let i = 1; i <= num - 1; i++) {
+    factorial *= i;
+  }
+  return ((factorial + 1) % (num * num) === 0);
 }
-
 module.exports = isWilsonPrime;
