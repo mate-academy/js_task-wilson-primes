@@ -18,8 +18,29 @@
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
-  // write code here
+  let wilsonProduct = 1;
+
+  if (num < 0) {
+    return false;
+  }
+
+  for (let i = 1; i < num; i++) {
+    wilsonProduct = wilsonProduct * i;
+  }
+
+  const currentNumber = ((wilsonProduct + 1) / (num * num) % 1);
+
+  for (let j = 2; j < num; j++) {
+    if (num % j !== 0) {
+      if (currentNumber !== 0) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
 }
 
 module.exports = isWilsonPrime;
