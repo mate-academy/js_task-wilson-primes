@@ -30,9 +30,11 @@ function isWilsonPrime(num) {
     wilsonProduct = wilsonProduct * i;
   }
 
+  const currentNumber = ((wilsonProduct + 1) / (num * num) % 1);
+
   for (let j = 2; j < num; j++) {
     if (num % j !== 0) {
-      if (((wilsonProduct + 1) / (num * num) % 1) !== 0) {
+      if (currentNumber !== 0) {
         return false;
       } else {
         return true;
