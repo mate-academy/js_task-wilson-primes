@@ -24,7 +24,7 @@ function isWilsonPrime(num) {
   return ((factorial(num-1) + 1) / (num * num) % 1 == 0) ?  true :  false;
 }
 
-var factorialArray = [];
+let factorialArray = [];
 function factorial (n) {
   if (n == 0 || n == 1)
     return 1;
