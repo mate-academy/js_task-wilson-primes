@@ -20,13 +20,12 @@
  */
 function isWilsonPrime(num) {
   let factorial = 1;
-  let formulaValue = 0;
 
   for (let i = 1; i <= num - 1; i++) {
     factorial = factorial * i;
   }
 
-  formulaValue = (factorial + 1) / (num ** 2);
+  const formulaValue = (factorial + 1) / (num * num);
 
   return Math.ceil(formulaValue) === formulaValue;
 }
