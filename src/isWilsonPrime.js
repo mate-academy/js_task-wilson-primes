@@ -19,7 +19,6 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
   let numFactorial = 1;
 
   for (let i = 1; i < num; i++) {
@@ -30,9 +29,9 @@ function isWilsonPrime(num) {
 
   if (res % 1 === 0) {
     return true;
-  } else {
-    return false;
   }
+
+  return false;
 }
 
 module.exports = isWilsonPrime;
