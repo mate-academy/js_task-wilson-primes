@@ -25,9 +25,9 @@ function isWilsonPrime(num) {
     numFactorial *= i;
   }
 
-  const primes = (numFactorial + 1) / (num * num);
+  const wilsonPrime = (numFactorial + 1) / (num * num);
 
-  if (primes % 1 === 0) {
+  if (wilsonPrime % 1 === 0) {
     return true;
   }
 
