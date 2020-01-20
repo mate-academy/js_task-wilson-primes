@@ -26,10 +26,10 @@ function factorial(n) {
 function isWilsonPrime(num) {
   let wilsonPrime;
 
-  if ((num ^ 0) === num && num > 0) {
+  if (Number.isInteger(num) && num > 0) {
     wilsonPrime = (factorial(num - 1) + 1) / (num * num);
 
-    return ((wilsonPrime ^ 0) === wilsonPrime);
+    return (Number.isInteger(wilsonPrime));
   }
 
   return false;
