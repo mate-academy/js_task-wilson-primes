@@ -18,8 +18,16 @@
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
-  // write code here
+  let fuctorialNum = num - 1;
+  let fuctorialRes;
+
+  for (fuctorialRes = 1; fuctorialNum > 0; fuctorialNum--) {
+    fuctorialRes *= fuctorialNum;
+  }
+
+  return Number.isInteger((fuctorialRes + 1) / (num * num));
 }
 
 module.exports = isWilsonPrime;
