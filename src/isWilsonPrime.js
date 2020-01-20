@@ -31,9 +31,9 @@ function isWilsonPrime(num) {
 
   if (Math.round(condition) === condition) {
     return true;
-  } else {
-    return false;
   }
+
+  return false;
 }
 
 module.exports = isWilsonPrime;
