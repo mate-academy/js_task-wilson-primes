@@ -19,13 +19,15 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  if (num < 0 || num % 1 != 0)
+  if (num < 0 || num % 1 != 0) {
     return false;
+  }
   return ((factorial(num-1) + 1) / (num * num) % 1 == 0) ?  true :  false;
 }
 
-let factorialArray = [];
 function factorial (n) {
+  let factorialArray = [];
+  
   if (n == 0 || n == 1)
     return 1;
   if (factorialArray[n] > 0)
