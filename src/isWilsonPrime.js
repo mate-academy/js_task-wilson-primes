@@ -27,11 +27,7 @@ function isWilsonPrime(num) {
 
   const wilson = (factorial + 1) / (num * num);
 
-  if (wilson % 1 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return (wilson % 1 === 0);
 }
 
 module.exports = isWilsonPrime;
