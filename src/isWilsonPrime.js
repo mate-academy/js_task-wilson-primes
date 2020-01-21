@@ -21,16 +21,20 @@
 
 function factorial(num) {
   if (num < 0) {
-    return false;
+    return -1;
   } else if (num === 0) {
-    return true;
+    return 1;
   }
 
   return num * factorial(num - 1);
 };
 
 function isWilsonPrime(num) {
-  return Number.isInteger((factorial(num - 1) + 1) / (num * num));
+  if ((factorial(num - 1) < 0)) {
+    return false;
+  } else {
+    return Number.isInteger((factorial(num - 1) + 1) / (num * num));
+  }
 };
 
 module.exports = isWilsonPrime;
