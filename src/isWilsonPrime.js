@@ -30,11 +30,7 @@ function factorial(n) {
 }
 
 function isWilsonPrime(num) {
-  if (((factorial(num - 1) + 1) / (num * num)) % 1 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return (((factorial(num - 1) + 1) / (num * num)) % 1 === 0);
 }
 
 module.exports = isWilsonPrime;
