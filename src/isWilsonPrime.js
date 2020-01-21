@@ -18,8 +18,20 @@
  *
  * @return {boolean}
  */
+function factorial(num) {
+  return (num !== 1) ? num * factorial(num - 1) : 1;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  if (num < 2 || num % 1 !== 0) {
+    return false;
+  }
+
+  const factorialNum = factorial(num - 1);
+
+  const wilsonCondition = (factorialNum + 1) / (num * num);
+
+  return wilsonCondition % 1 === 0;
 }
 
 module.exports = isWilsonPrime;
