@@ -18,6 +18,7 @@
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
   let num1 = num - 1;
   let result = 1;
@@ -33,12 +34,13 @@ function isWilsonPrime(num) {
     result = result * num1;
     num1--;
   }
-
   result++;
   calc = result / (num * num);
 
   if (Number.isInteger(calc)) {
     return true;
+  } else {
+    return false;
   }
 }
 
