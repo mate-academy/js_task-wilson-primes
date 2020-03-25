@@ -31,11 +31,7 @@ function isWilsonPrime(num) {
     return false;
   }
 
-  if (Number.isInteger((fact(num - 1) + 1) / (num * num))) {
-    return true;
-  }
-
-  return false;
+  return (Number.isInteger((fact(num - 1) + 1) / (num * num)));
 }
 
 // another option ^^
