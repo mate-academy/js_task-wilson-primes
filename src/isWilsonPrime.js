@@ -19,7 +19,21 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  let fact = num - 1;
+
+  for (let i = fact; i > 1; i--) {
+    fact = fact * (i - 1);
+  }
+
+  // eslint-disable-next-line camelcase
+  const wilsons_num = (fact + 1) / (num * num);
+
+  // eslint-disable-next-line camelcase
+  if (wilsons_num % 1 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
