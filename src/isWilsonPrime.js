@@ -24,7 +24,7 @@ function isWilsonPrime(num) {
   for (let i = 1; i <= num - 1; i++) {
     k = k * i;
   }
-  return (k + 1) % (num * num) === 0 ? true : false;
+  return (k + 1) % (num * num) === 0;
 }
 
 module.exports = isWilsonPrime;
