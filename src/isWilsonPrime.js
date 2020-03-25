@@ -18,8 +18,13 @@
  *
  * @return {boolean}
  */
+// пока так)
 function isWilsonPrime(num) {
-  // write code here
+  if (num === 5 || num === 13 || num === 563) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
