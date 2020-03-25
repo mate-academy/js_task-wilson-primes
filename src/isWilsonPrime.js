@@ -19,7 +19,15 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  let facNum = num - 1;
+
+  for (let i = facNum - 1; i >= 1; i--) {
+    facNum *= i;
+  }
+
+  const isWhole = (facNum + 1) / (num * num);
+
+  return Number.isInteger(isWhole);
 }
 
 module.exports = isWilsonPrime;
