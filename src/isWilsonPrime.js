@@ -19,13 +19,17 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  let facNum = num - 1;
-
-  for (let i = facNum - 1; i >= 1; i--) {
-    facNum *= i;
+  if (num < 1 || num % 1 !== 0) {
+    return false;
   }
 
-  const isWhole = (facNum + 1) / (num * num);
+  let factorial = num - 1;
+
+  for (let i = factorial - 1; i >= 1; i--) {
+    factorial *= i;
+  }
+
+  const isWhole = (factorial + 1) / (num * num);
 
   return Number.isInteger(isWhole);
 }
