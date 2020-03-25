@@ -19,27 +19,6 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  function isPrime(x) {
-    let divider = 2;
-
-    while (divider < x) {
-      if (x % divider === 0) {
-        return false;
-      }
-      divider++;
-    }
-
-    return true;
-  }
-
-  function factorial(i, acc = 1) {
-    if (i === 1) {
-      return acc;
-    }
-
-    return factorial(i - 1, i * acc);
-  };
-
   if (num < 0) {
     return false;
   }
@@ -58,5 +37,26 @@ function isWilsonPrime(num) {
 
   return false;
 }
+
+function isPrime(x) {
+  let divider = 2;
+
+  while (divider < x) {
+    if (x % divider === 0) {
+      return false;
+    }
+    divider++;
+  }
+
+  return true;
+}
+
+function factorial(i, acc = 1) {
+  if (i === 1) {
+    return acc;
+  }
+
+  return factorial(i - 1, i * acc);
+};
 
 module.exports = isWilsonPrime;
