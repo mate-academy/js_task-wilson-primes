@@ -19,11 +19,23 @@
  * @return {boolean}
  */
 // пока так)
-function isWilsonPrime(num) {
-  if (num === 5 || num === 13 || num === 563) {
-    return true;
-  } else {
+const factorial = function(n) {
+  if (n === 1) {
+    return 1;
+  } else if (n < 0) {
     return false;
+  } else {
+    return n * factorial(n - 1);
+  }
+};
+
+function isWilsonPrime(num) {
+  const result = (factorial(num - 1) + 1) / (num * num);
+
+  if (result % 1) {
+    return false;
+  } else {
+    return true;
   }
 }
 
