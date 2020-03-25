@@ -19,7 +19,9 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  const wilsonsPrimes = [5, 13, 563];
+
+  return wilsonsPrimes.includes(num);
 }
 
 module.exports = isWilsonPrime;
