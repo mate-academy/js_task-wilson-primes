@@ -19,7 +19,15 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  const prime1 = 5;
+  const prime2 = 13;
+  const prime3 = 563;
+
+  if (num === prime1 || num === prime2 || num === prime3) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
