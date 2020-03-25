@@ -19,9 +19,9 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  const val1 = num - 1;
+  const factorialVal = num - 1;
 
-  if (val1 < 0 || !Number.isInteger(val1)) {
+  if (factorialVal < 0 || !Number.isInteger(factorialVal)) {
     return false;
   }
 
@@ -29,10 +29,13 @@ function isWilsonPrime(num) {
     return (n !== 1) ? n * factorial(n - 1) : 1;
   }
 
-  const val3 = (Math.floor(factorial(val1)) + 1) / Math.pow(num, 2);
-  const res = Number.isInteger(val3);
+  const numberInDegree = Math.pow(num, 2);
+  const intFactorialVal = Math.floor(factorial(factorialVal));
 
-  return res;
+  const prime = (intFactorialVal + 1) / numberInDegree;
+  const isTrue = Number.isInteger(prime);
+
+  return isTrue;
 }
 
 module.exports = isWilsonPrime;
