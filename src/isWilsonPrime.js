@@ -19,7 +19,7 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  if ((num ^ 0) !== num || num < 0) {
+  if (num % 1 !== 0 || num < 0) {
     return false;
   }
 
@@ -33,10 +33,10 @@ function isWilsonPrime(num) {
 
   const y = (factorial(num - 1) + 1) / (num * num);
 
-  if ((y ^ 0) === y) {
-    return true;
-  } else {
+  if (y % 1 !== 0) {
     return false;
+  } else {
+    return true;
   }
 }
 
