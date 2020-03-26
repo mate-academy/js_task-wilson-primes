@@ -16,10 +16,18 @@
  *
  * @param {number} num
  *
- * @return {boolean}
+ * @return {number}
  */
+function fact(num) {
+  return num ? num * fact(num - 1) : 1;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  if (num % 2 === 0 || num % 3 === 0 || num % 5 === 0 || num % 1 !== 0) {
+    return false;
+  }
+
+  return ((fact(num - 1) + 1) % (num * num) === 0);
 }
 
 module.exports = isWilsonPrime;
