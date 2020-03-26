@@ -18,8 +18,32 @@
  *
  * @return {boolean}
  */
+function factorial(num) {
+  if (num > 1) {
+    return num * factorial(num - 1);
+  } else {
+    return 1;
+  }
+}
+
+function isPrime(num) {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return num > 1;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  if (num % 1 !== 0) {
+    return false;
+  } else {
+    const rest = (factorial(num - 1) + 1) / (num * num);
+
+    return isPrime(Math.ceil(rest));
+  }
 }
 
 module.exports = isWilsonPrime;
