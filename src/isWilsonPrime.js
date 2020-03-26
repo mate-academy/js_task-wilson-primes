@@ -25,15 +25,9 @@ function isWilsonPrime(num) {
     fact = fact * (i - 1);
   }
 
-  // eslint-disable-next-line camelcase
-  const wilsons_num = (fact + 1) / (num * num);
+  const wilsonsNum = (fact + 1) / (num * num);
 
-  // eslint-disable-next-line camelcase
-  if (wilsons_num % 1 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return wilsonsNum % 1 === 0;
 }
 
 module.exports = isWilsonPrime;
