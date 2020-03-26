@@ -30,9 +30,7 @@ function isWilsonPrime(num) {
   }
 
   const numberInDegree = Math.pow(num, 2);
-  const intFactorialVal = Math.floor(factorial(factorialVal));
-
-  const prime = (intFactorialVal + 1) / numberInDegree;
+  const prime = (factorial(factorialVal) + 1) / numberInDegree;
   const isTrue = Number.isInteger(prime);
 
   return isTrue;
