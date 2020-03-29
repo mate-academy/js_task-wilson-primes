@@ -19,9 +19,23 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  const wilsonsPrimes = [5, 13, 563];
+  let factorial = 1;
 
-  return wilsonsPrimes.includes(num);
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  for (let j = num - 1; j > 0; j--) {
+    factorial *= j;
+  }
+
+  return Number.isInteger((factorial + 1) / (num * num));
+
+  // const wilsonsPrimes = [5, 13, 563];
+
+  // return wilsonsPrimes.includes(num);
 }
 
 module.exports = isWilsonPrime;
