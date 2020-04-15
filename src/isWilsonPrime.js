@@ -18,8 +18,7 @@
  *
  * @return {boolean}
  */
-function isWilsonPrime(num) {
-  // write code here
-}
+const isWilsonPrime = num => (factorial(num - 1) + 1) / (num * num) % 1 === 0;
+const factorial = x => x <= 1 ? 1 : x * factorial(x - 1);
 
 module.exports = isWilsonPrime;
