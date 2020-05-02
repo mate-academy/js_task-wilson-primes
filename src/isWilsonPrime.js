@@ -20,6 +20,15 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  let factNum = 1;
+
+  for (let i = 1; i < num; i++) {
+    factNum *= i;
+  }
+
+  const number = (factNum + 1) / (num * num);
+
+  return (number - Math.trunc(number)) === 0;
 }
 
 module.exports = isWilsonPrime;
