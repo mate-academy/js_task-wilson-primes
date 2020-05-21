@@ -31,7 +31,9 @@ function isWilsonPrime(num) {
     return res;
   }
 
-  if (Number.isInteger((factorial(num - 1) + 1) / (num * num))) {
+  const check = (factorial(num - 1) + 1) / (num * num);
+
+  if ((check ^ 0) === check) {
     return true;
   } else {
     return false;
