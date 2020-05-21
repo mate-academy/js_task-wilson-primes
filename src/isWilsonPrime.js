@@ -31,7 +31,7 @@ function isWilsonPrime(num) {
     return n * factor(n - 1);
   };
 
-  return Number.isInteger((factor(num - 1) + 1) / (num * num));
+  return (factor(num - 1) + 1) / (num * num) % 1 === 0;
 }
 
 module.exports = isWilsonPrime;
