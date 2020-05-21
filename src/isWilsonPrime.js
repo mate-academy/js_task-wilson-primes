@@ -18,27 +18,22 @@
  *
  * @return {boolean}
  */
-function isPrime(a) {
+
+function isValid(a) {
   if (Number.isInteger(a)) {
-    for (let i = 2; i < a; i++) {
-      if (a % i === 0) {
-        return false;
-      }
-    }
+    return a > 1;
   } else {
     return false;
   }
-
-  return a > 1;
-};
+}
 
 function factorial(n) {
   return (n !== 1) ? n * factorial(n - 1) : 1;
-};
+}
 
 function isWilsonPrime(num) {
-  if (isPrime(num)) {
-    return Number.isInteger((factorial(num - 1) + 1) / Math.pow(num, 2));
+  if (isValid(num)) {
+    return (factorial(num - 1) + 1) / Math.pow(num, 2) % 1 === 0;
   } else {
     return false;
   }
