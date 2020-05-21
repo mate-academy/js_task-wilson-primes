@@ -32,7 +32,7 @@ function isWilsonPrime(num) {
 
   const res = (factorial + 1) / (num * num);
 
-  if (Number.isInteger(res)) {
+  if (res % 1 === 0) {
     return true;
   }
 
