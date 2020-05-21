@@ -30,13 +30,7 @@ function factorial(a) {
 }
 
 function isWilsonPrime(num) {
-  const result = (factorial(num - 1) + 1) / (num * num);
-
-  if (result % 1 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return !((factorial(num - 1) + 1) % (num * num));
 }
 
 module.exports = isWilsonPrime;
