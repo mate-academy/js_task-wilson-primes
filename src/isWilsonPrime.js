@@ -33,7 +33,7 @@ function isWilsonPrime(num) {
 
   const prime = (factorialResult + 1) / (num * num);
 
-  return (prime ^ 0) === prime;
+  return (prime % 1) === 0;
 }
 
 module.exports = isWilsonPrime;
