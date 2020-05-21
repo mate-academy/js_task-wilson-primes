@@ -18,8 +18,25 @@
  *
  * @return {boolean}
  */
+
+function factorial(a) {
+  let sum = 1;
+
+  for (let i = 2; i <= a; i++) {
+    sum *= i;
+  }
+
+  return sum;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  const result = (factorial(num - 1) + 1) / (num * num);
+
+  if (result % 1 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
