@@ -21,7 +21,7 @@
 function isWilsonPrime(num) {
   const wilsonNumber = (factorialize(num - 1) + 1) / (num * num);
 
-  return isPrime(num) && Number.isInteger(wilsonNumber);
+  return (wilsonNumber ^ 0) === wilsonNumber;
 }
 
 function factorialize(num) {
@@ -32,16 +32,6 @@ function factorialize(num) {
   }
 
   return result;
-}
-
-function isPrime(num) {
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-
-  return num > 1;
 }
 
 module.exports = isWilsonPrime;
