@@ -20,7 +20,7 @@
  */
 
 function isValid(a) {
-  if (Number.isInteger(a)) {
+  if (a % 1 === 0) {
     return a > 1;
   } else {
     return false;
