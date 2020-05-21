@@ -20,6 +20,19 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  let factorNum = 1;
+  let condition = 0;
+
+  for (let i = 1; i <= (num - 1); i++) {
+    factorNum *= i;
+  }
+  condition = (factorNum + 1) / (num * num);
+
+  if (!(condition - Math.floor(condition))) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
