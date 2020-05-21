@@ -19,7 +19,7 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  if (num < 0) {
+  if (num < 2) {
     return false;
   }
 
