@@ -19,19 +19,15 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  let result = 1;
+  let factorial = 1;
   let count = num;
 
   while (count > 2) {
     --count;
-    result *= count;
+    factorial *= count;
   }
 
-  if ((result + 1) / (num * num) % 1 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return (factorial + 1) / (num ** 2) % 1 === 0;
 }
 
 module.exports = isWilsonPrime;
