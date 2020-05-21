@@ -18,8 +18,25 @@
  *
  * @return {boolean}
  */
+
+function isValid(a) {
+  if (a % 1 === 0) {
+    return a > 1;
+  } else {
+    return false;
+  }
+}
+
+function factorial(n) {
+  return (n !== 1) ? n * factorial(n - 1) : 1;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  if (isValid(num)) {
+    return (factorial(num - 1) + 1) / Math.pow(num, 2) % 1 === 0;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
