@@ -19,9 +19,9 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  const wilsonNumber = (factorialize(num - 1) + 1) / (num * num);
+  const wilsonNumber = (factorialize(num - 1) + 1) % (num * num);
 
-  return (wilsonNumber ^ 0) === wilsonNumber;
+  return !wilsonNumber;
 }
 
 function factorialize(num) {
