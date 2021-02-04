@@ -20,6 +20,13 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  const result = ((factorial(num - 1) + 1)) / (num * num);
+
+  return Number.isInteger(result);
+}
+
+function factorial(n) {
+  return (n > 0) ? n * factorial(n - 1) : 1;
 }
 
 module.exports = isWilsonPrime;
