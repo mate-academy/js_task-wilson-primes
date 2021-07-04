@@ -20,6 +20,25 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  const factorial = (n) => (n <= 1 ? 1 : n * factorial(n - 1));
+
+  const isWholeNumber = (n) => Math.trunc(n) === n;
+
+  const isPrime = (n) => {
+    if (n < 2) {
+      return false;
+    }
+
+    for (let i = 2; i < n / 2; i++) {
+      if (!(n % i)) {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  return isPrime(num) && isWholeNumber((factorial(num - 1) + 1) / (num * num));
 }
 
 module.exports = isWilsonPrime;
