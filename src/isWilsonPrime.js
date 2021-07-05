@@ -18,8 +18,21 @@
  *
  * @return {boolean}
  */
+
+const factorial = function(factNum) {
+  return factNum < 2
+    ? factNum
+    : factNum * factorial(factNum - 1);
+};
+
 function isWilsonPrime(num) {
   // write code here
+  const wilsonCalc = (factorial(num - 1) + 1) / Math.pow(num, 2);
+
+  if (Number.isInteger(wilsonCalc) === true) {
+    return true;
+  }
+  return false;
 }
 
 module.exports = isWilsonPrime;
