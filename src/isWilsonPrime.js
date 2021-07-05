@@ -18,8 +18,30 @@
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
-  // write code here
+  let num1 = num - 1;
+  let result = 1;
+  let calc = 1;
+
+  if (num1 === 0 || num1 === 1) {
+    return 1;
+  } else if (num1 < 0) {
+    return false;
+  }
+
+  while (num1 > 1) {
+    result = result * num1;
+    num1--;
+  }
+  result++;
+  calc = result / (num * num);
+
+  if (Number.isInteger(calc)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
