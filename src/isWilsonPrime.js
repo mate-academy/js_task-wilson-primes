@@ -18,8 +18,17 @@
  *
  * @return {boolean}
  */
+
+function factorial(n) {
+  return (n !== 1) ? n * factorial(n - 1) : 1;
+}
+
 function isWilsonPrime(num) {
-  // write code here
+  const isFraction = (num - Math.floor(num)) !== 0;
+  if (num > 0 && !isFraction) {
+    return Number.isInteger(((factorial(num - 1) + 1) / (num * num)));
+  }
+  return false;
 }
 
 module.exports = isWilsonPrime;
