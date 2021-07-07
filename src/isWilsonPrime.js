@@ -19,7 +19,15 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  let sum = 1;
+  let primeSubtract1 = num - 1;
+
+  while (primeSubtract1 > 1) {
+    sum *= primeSubtract1;
+    primeSubtract1--;
+  }
+
+  return Number.isInteger((sum + 1) / (num ** 2));
 }
 
 module.exports = isWilsonPrime;
