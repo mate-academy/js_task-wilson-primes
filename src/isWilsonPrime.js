@@ -13,13 +13,30 @@
  * Examples:
  * isWilsonPrime(5)      returns true
  * isWilsonPrime(9)      returns false
- *
+ *2
  * @param {number} num
  *
  * @return {boolean}
  */
+
 function isWilsonPrime(num) {
-  // write code here
+  let factorialVal = 1;
+
+  if (num > 0) {
+    for (let i = 1; i <= num - 1; i++) {
+      factorialVal *= i;
+    }
+  } else {
+    return false;
+  }
+
+  const res = (factorialVal + 1) / num ** 2;
+
+  if (Number.isInteger(res)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
