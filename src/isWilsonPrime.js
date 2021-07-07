@@ -19,7 +19,16 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  let prime = num - 1;
+  let result = prime;
+  const numdouble = num * num;
+
+  while (prime > 1) {
+    prime--;
+    result *= prime;
+  }
+
+  return (result + 1) % numdouble === 0;
 }
 
 module.exports = isWilsonPrime;
