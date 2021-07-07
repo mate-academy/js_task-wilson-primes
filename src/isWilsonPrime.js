@@ -19,7 +19,15 @@
  * @return {boolean}
  */
 function isWilsonPrime(num) {
-  // write code here
+  let nFactorial = 1;
+
+  for (let i = 1; i < num; i++) {
+    nFactorial *= i;
+  }
+
+  const analysisWilson = (nFactorial + 1) / (num * num);
+
+  return analysisWilson % 1 === 0;
 }
 
 module.exports = isWilsonPrime;
