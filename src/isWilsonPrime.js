@@ -20,6 +20,12 @@
  */
 function isWilsonPrime(num) {
   // write code here
+  // if there are only three of them
+  if (num === 5 || num === 13 || num === 563) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = isWilsonPrime;
